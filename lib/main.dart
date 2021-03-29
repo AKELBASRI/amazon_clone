@@ -1,5 +1,6 @@
 import 'package:amazon_clone/NavigationBar/NavigationBar.dart';
 import 'package:flutter/material.dart';
+import 'package:amazon_clone/Products/Products.Dart';
 
 void main() {
   runApp(MyApp());
@@ -70,9 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Container(
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
-      child: Column(children: [
-        NavigationBar(),
-      ]),
+      child: Column(children: [NavigationBar(), Products()]),
     ));
   }
 }
