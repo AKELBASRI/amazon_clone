@@ -1,4 +1,5 @@
 import 'package:amazon_clone/NavigationBar/NavigationBar.dart';
+import 'package:amazon_clone/config/palette.dart';
 import 'package:flutter/material.dart';
 import 'package:amazon_clone/Products/Products.Dart';
 
@@ -68,10 +69,13 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
+        resizeToAvoidBottomInset: false,
+        backgroundColor: Colors.black12,
         body: Container(
-      height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width,
-      child: Column(children: [NavigationBar(), Products()]),
-    ));
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          child: SingleChildScrollView(
+              child: Column(children: [NavigationBar(), Products()])),
+        ));
   }
 }
