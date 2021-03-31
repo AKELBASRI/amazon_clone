@@ -70,11 +70,12 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
         resizeToAvoidBottomInset: false,
-        backgroundColor: Colors.black12,
+        backgroundColor: Palette.colorBg,
         body: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
               child: Column(children: [NavigationBar(), Products()])),
         ));
   }
